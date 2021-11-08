@@ -1406,10 +1406,10 @@ def fed_ban_list(update, context):  # sourcery no-metrics
                 backups += json.dumps(json_parser)
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "kigyo_fbanned_users.json"
+                output.name = "https://t.me/The3000Gang_fbanned_users.json"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="kigyo_fbanned_users.json",
+                    filename="https://t.me/The3000Gang_fbanned_users.json",
                     caption="Total {} User are blocked by the Federation {}.".format(
                         len(getfban), info["fname"]
                     ),
@@ -1450,10 +1450,10 @@ def fed_ban_list(update, context):  # sourcery no-metrics
                 )
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "kigyo_fbanned_users.csv"
+                output.name = "https://t.me/The3000Gang_fbanned_users.csv"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="kigyo_fbanned_users.csv",
+                    filename="https://t.me/The3000Gang_fbanned_users.csv",
                     caption="Total {} User are blocked by Federation {}.".format(
                         len(getfban), info["fname"]
                     ),
@@ -2392,7 +2392,7 @@ def fed_help(update: Update, context: CallbackContext):
         parse_mode=ParseMode.MARKDOWN,
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Back", callback_data=f"help_module({__mod_name__.lower()})"),
-            InlineKeyboardButton(text='Report Error', url='https://t.me/YorkTownEagleUnion')]]
+            InlineKeyboardButton(text='Report Error', url='https://t.me/The3000Gang')]]
         ),
     )
     bot.answer_callback_query(query.id)
